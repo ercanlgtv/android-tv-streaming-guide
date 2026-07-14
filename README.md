@@ -1,282 +1,319 @@
 # Android TV Streaming Guide
 
-> Everything you need to replace **Stremio** and **CloudStream** on your Android
-> TV.  
-> Apps, links, features, what supports what — no fluff.
+> Everything to replace **Stremio** and **CloudStream** on your Android TV.  
+> Pure lists, links, features, what supports what.
 
 ---
 
 ## Jump to
 
-- [Stremio Addon Compatible Apps](#-stremio-addon-compatible-apps)
-- [CloudStream Plugin Compatible Apps](#-cloudstream-plugin-compatible-apps)
-- [All FOSS Alternatives](#-all-foss-alternatives)
-- [Hidden Gems Worth Knowing](#-hidden-gems-worth-knowing)
-- [Feature Comparison](#-feature-comparison)
-- [What Does NOT Support These Addons](#-what-does-not-support-these-addons)
+- [Apps with Stremio Addon Support](#-apps-with-stremio-addon-support)
+- [Apps with CloudStream Plugin Support](#-apps-with-cloudstream-plugin-support)
+- [Media Centers](#-media-centers)
+- [All-in-One Streaming Apps](#-all-in-one-streaming-apps)
+- [IPTV Players](#-iptv-players)
+- [Debrid Tools & Players](#-debrid-tools--players)
+- [Media Players](#-media-players)
+- [YouTube / Twitch](#-youtube--twitch-clients)
+- [Anime](#-anime)
+- [Tracking & Discovery](#-tracking--discovery)
+- [Hidden Gems (<500★)](#-hidden-gems-500)
+- [What Does NOT Support](#-what-does-not-support)
+- [Comparison Table](#-comparison-table)
 - [Final Recommendations](#-final-recommendations)
-- [Ecosystem & Tools](#-ecosystem--tools)
+- [Ecosystem Tools](#-ecosystem--tools)
 
 ---
 
-## 📺 Stremio Addon Compatible Apps
+## 📺 Apps With Stremio Addon Support
 
-### Native Support (Paste a Stremio manifest URL and it just works)
+### Native (paste manifest URL, it works)
 
-| App            | Links                                                                      | Android TV | Key Features                                                                                       |
-| -------------- | -------------------------------------------------------------------------- | :--------: | -------------------------------------------------------------------------------------------------- |
-| **NuvioTV**    | [GitHub](https://github.com/NuvioMedia/NuvioTV) · [Site](https://nuvio.tv) |     ✅     | Profiles, cross-device sync, MPV player, Trakt, debrid, free (Stremio charges $39/yr for profiles) |
-| **ARVIO**      | [GitHub](https://github.com/ProdigyV21/ARVIO) · [Site](https://arvio.tv)   |     ✅     | Unifies Jellyfin + Plex + Emby + Stremio addons + IPTV in one UI. Apache 2.0                       |
-| **MediaStorm** | [GitHub](https://github.com/godver3/mediastorm)                            |     ✅     | Stremio addon bundles, debrid, Usenet, Docker self-host. Renamed from STRMR                        |
-| **DodoStream** | [GitHub](https://github.com/DodoraApp/DodoStream)                          |     ✅     | Privacy-focused, React Native, works with Stremio addons                                           |
-| **Lumera**     | [GitHub](https://github.com/LumeraD3v/Lumera)                              |     ✅     | Import your Stremio account, IntroDb skip intro, adaptive HLS/DASH, speed control                  |
-| **Nexio**      | [GitHub](https://github.com/johnneerdael/nexio)                            |     ✅     | Companion web portal for easy setup, debrid-aware, 49 releases in 3 months                         |
-| **Debrify**    | [GitHub](https://github.com/varunsalian/debrify)                           | ✅ TV mode | Debrid manager + Stremio addons + built-in mpv player + Jackett/Prowlarr search plugins            |
+| App            | GitHub                                                             |              ATV               | Features                                                                          |
+| -------------- | ------------------------------------------------------------------ | :----------------------------: | --------------------------------------------------------------------------------- |
+| **NuvioTV**    | [NuvioMedia/NuvioTV](https://github.com/NuvioMedia/NuvioTV) 2k★    |               ✅               | Profiles, sync, MPV, Trakt, debrid, free. Stremio charges $39/yr for profiles now |
+| **ARVIO**      | [ProdigyV21/ARVIO](https://github.com/ProdigyV21/ARVIO) 583★       |               ✅               | Unifies Jellyfin + Plex + Emby + IPTV + Stremio addons. Apache 2.0                |
+| **MediaStorm** | [godver3/mediastorm](https://github.com/godver3/mediastorm) 112★   |               ✅               | Stremio bundles, debrid, Usenet, Docker self-host. Renamed from STRMR             |
+| **DodoStream** | [DodoraApp/DodoStream](https://github.com/DodoraApp/DodoStream)    |               ✅               | Privacy-first, React Native                                                       |
+| **Lumera**     | [LumeraD3v/Lumera](https://github.com/LumeraD3v/Lumera) 201★       |               ✅               | Stremio account import, IntroDb, adaptive HLS/DASH, speed control                 |
+| **Nexio**      | [johnneerdael/nexio](https://github.com/johnneerdael/nexio) 19★    |               ✅               | Companion web portal, debrid-aware, 49 releases in 3 months                       |
+| **Debrify**    | [varunsalian/debrify](https://github.com/varunsalian/debrify) 312★ |             ✅ TV              | Debrid manager + Stremio addons + mpv player + Jackett/Prowlarr                   |
+| **VortX**      | [VortXTV/VortX](https://github.com/VortXTV/VortX)                  | ❌ (Apple now, Android coming) | Native Apple TV/iOS/Mac player. Android next. Stremio addons planned              |
 
 ### Bridge — Run Stremio Addons Inside Another App
 
-| App         | Bridge       | Links                                                                              | How It Works                                                                                                               |
-| ----------- | ------------ | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **Kodi**    | Stremio2Kodi | [GitHub](https://github.com/VSeryi/plugin.video.stremio2kodi)                      | Kodi addon that wraps Stremio addons — paste manifest URL, browse in Kodi UI. HDR/DV/IMAX detection, auto-play, TMDbHelper |
-| **Syncler** | Providra     | [GitHub](https://github.com/dtankdempsey2/Providra) · [Site](https://providra.com) | Android server that converts Stremio addon responses into Syncler format. Also supports Nuvio plugins                      |
-| **Chillio** | ChilliBridge | [GitHub](https://github.com/elfhosted/chillibridge) · [Site](https://chillio.app)  | Apple-only. Server translates Stremio addon → ChillLink protocol. MediaFlow proxy support                                  |
+| Host App          | Bridge                     | Link                                                                                           | How                                                                            |
+| ----------------- | -------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Kodi**          | Stremio2Kodi               | [VSeryi/plugin.video.stremio2kodi](https://github.com/VSeryi/plugin.video.stremio2kodi)        | Kodi addon, paste manifest URL, browse in Kodi UI. HDR/DV detection            |
+| **Syncler**       | Providra                   | [dtankdempsey2/Providra](https://github.com/dtankdempsey2/Providra)                            | Android server, converts Stremio addon → Syncler vendor format                 |
+| **Inside4ndroid** | M3U-XCAPI-EPG-IPTV-Stremio | [M3U-XCAPI-EPG-IPTV-Stremio](https://github.com/Inside4ndroid/M3U-XCAPI-EPG-IPTV-Stremio) 148★ | Stremio addon that ingests IPTV M3U/XC/EPG with config UI, caching, multi-user |
+| **ElfHosted**     | ChilliBridge               | [elfhosted/chillibridge](https://github.com/elfhosted/chillibridge)                            | Translates Stremio addon → ChillLink for Chillio (Apple only)                  |
 
 ---
 
-## ☁️ CloudStream Plugin Compatible Apps
+## ☁️ Apps With CloudStream Plugin Support
 
-**Hard truth:** Only **2 non-fork apps** can load native `.cs3` CloudStream
-plugins.  
-**Why:** `.cs3` files are compiled Kotlin bytecode (DEX) — requires Android's
-`DexClassLoader`, GPL-3.0 copyleft, Android-specific APIs.
+**Hard truth:** Only 2 non-fork apps can load native `.cs3` files (Kotlin DEX
+bytecode).
 
-### Actually Loads .cs3 Files
+| App                 | GitHub                                                                                          |    Loads .cs3?    |    ATV     |
+| ------------------- | ----------------------------------------------------------------------------------------------- | :---------------: | :--------: |
+| **Sozo (Soplay)**   | [professorDeveloper/sozo](https://github.com/professorDeveloper/sozo) 27★                       | ✅ ~70/73 plugins | ✅ Flutter |
+| **cloudstream-web** | [mindflarevortx-maker/cloudstream-web](https://github.com/mindflarevortx-maker/cloudstream-web) | ❌ JS ports only  |   ❌ Web   |
 
-| App                 | GitHub                                                                                          |         Coverage          | Android TV  |
-| ------------------- | ----------------------------------------------------------------------------------------------- | :-----------------------: | :---------: |
-| **Sozo (Soplay)**   | [professorDeveloper/sozo](https://github.com/professorDeveloper/sozo)                           |    ~70/73 plugins work    | ✅ Flutter  |
-| **cloudstream-web** | [mindflarevortx-maker/cloudstream-web](https://github.com/mindflarevortx-maker/cloudstream-web) | JS ports only (no `.cs3`) | ❌ Web only |
+**Requested (not done):**
 
-### Feature Requested (Not Implemented)
+- **NuvioMobile** [#980](https://github.com/NuvioMedia/NuvioMobile/issues/980) —
+  asked for CS plugin support May 2026
 
-| App             | Issue                                                        | Request                                                   |
-| --------------- | ------------------------------------------------------------ | --------------------------------------------------------- |
-| **NuvioMobile** | [#980](https://github.com/NuvioMedia/NuvioMobile/issues/980) | Add repo.json support, CloudStream provider compatibility |
+**CloudStream itself (still the best bet):**
 
-### CloudStream Itself (Still Active — Last Resort)
+| Fork                                 |  Stars   | Link                                                     |
+| ------------------------------------ | :------: | -------------------------------------------------------- |
+| **recloudstream/cloudstream** (main) |  10.1k   | [GitHub](https://github.com/recloudstream/cloudstream)   |
+| **cloudstream3/cs3-android**         |   new    | [GitHub](https://github.com/cloudstream3/cs3-android)    |
+| **LagradOst original**               | archived | [Codeberg](https://codeberg.org/cloudstream/cloudstream) |
 
-| Fork                                        | GitHub                                                                             |     Stars     |
-| ------------------------------------------- | ---------------------------------------------------------------------------------- | :-----------: |
-| **recloudstream/cloudstream** (main)        | [link](https://github.com/recloudstream/cloudstream)                               |    10.1k★     |
-| **Stormunblessed**                          | [link](https://github.com/Stormunblessed/cloudstream-3)                            |     131★      |
-| **cloudstream3/cs3-android** (new official) | [link](https://github.com/cloudstream3/cs3-android)                                |       —       |
-| **Original** (archived)                     | [LagradOst/CloudStream-3](https://codeberg.org/cloudstream/cloudstream) (Codeberg) | Archived 2023 |
+**Plugin repos:**
 
-### CloudStream Plugin Repos
-
-| Repo               | Link                                                                                          | What's Inside                                                  |
-| ------------------ | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **phisher98**      | [cloudstream-extensions-phisher](https://github.com/phisher98/cloudstream-extensions-phisher) | 78 providers, movies/TV/anime/live/torrent/music, 16 languages |
-| **MegaRepo**       | [self-similarity/MegaRepo](https://github.com/self-similarity/MegaRepo)                       | Meta-installer — installs all known repos at once              |
-| **cs3plugs**       | [justsimplyleon/cs3plugs](https://github.com/justsimplyleon/cs3plugs)                         | Curated list of what actually works                            |
-| **CSX**            | [SaurabhKaperwan/CSX](https://github.com/SaurabhKaperwan/CSX)                                 | Extra provider collection                                      |
-| **Official repos** | [recloudstream/cs-repos](https://github.com/recloudstream/cs-repos)                           | Official database                                              |
+| Repo          | Link                                                                    | Content                    |
+| ------------- | ----------------------------------------------------------------------- | -------------------------- |
+| **phisher98** | [link](https://github.com/phisher98/cloudstream-extensions-phisher)     | 78 providers, 16 languages |
+| **MegaRepo**  | [self-similarity/MegaRepo](https://github.com/self-similarity/MegaRepo) | Install-all meta repo      |
+| **cs3plugs**  | [justsimplyleon/cs3plugs](https://github.com/justsimplyleon/cs3plugs)   | Curated working list       |
+| **CSX**       | [SaurabhKaperwan/CSX](https://github.com/SaurabhKaperwan/CSX)           | Extra providers            |
 
 ---
 
-## 🧩 All FOSS Alternatives
+## 🏛️ Media Centers
 
-### All-in-One (Everything in One App)
+| App                     | GitHub                                                                        |   ★   | License |   ATV    |    Plugins     | Protocols                                                        |
+| ----------------------- | ----------------------------------------------------------------------------- | :---: | :-----: | :------: | :------------: | ---------------------------------------------------------------- |
+| **Kodi**                | [xbmc/xbmc](https://github.com/xbmc/xbmc)                                     | 20.9k | GPL-2.0 |    ✅    |  1000s Python  | Torrent, IPTV, SMB, NFS, WebDAV, UPnP, HTTP, FTP, Plex, Jellyfin |
+| **Jellyfin Android TV** | [jellyfin/jellyfin-androidtv](https://github.com/jellyfin/jellyfin-androidtv) | 4.2k  | GPL-2.0 |    ✅    | Server plugins | Via Jellyfin server (SMB/NFS/WebDAV)                             |
+| **Jellyfin Server**     | [jellyfin/jellyfin](https://github.com/jellyfin/jellyfin)                     | 52.6k | GPL-2.0 |    —     | NuGet plugins  | All protocols as media source                                    |
+| **CoreELEC**            | [CoreELEC/CoreELEC](https://github.com/CoreELEC/CoreELEC)                     | 1.8k  | GPL-2.0 | OS-level |     Kodi's     | Amlogic TV boxes, Dolby Vision, dual-boot with Android           |
 
-|                     |                           NuvioTV                           |                          ARVIO                          |                         MediaStorm                          |
-| ------------------- | :---------------------------------------------------------: | :-----------------------------------------------------: | :---------------------------------------------------------: |
-| **GitHub**          | [NuvioMedia/NuvioTV](https://github.com/NuvioMedia/NuvioTV) | [ProdigyV21/ARVIO](https://github.com/ProdigyV21/ARVIO) | [godver3/mediastorm](https://github.com/godver3/mediastorm) |
-| **License**         |                           GPL-3.0                           |                       Apache-2.0                        |                             OSS                             |
-| **ATV**             |                          ✅ Native                          |                        ✅ Native                        |                          ✅ Native                          |
-| **Stremio addons**  |                           ✅ Full                           |                         ✅ Full                         |                           ✅ Full                           |
-| **Trakt**           |                             ✅                              |                           ✅                            |                             ✅                              |
-| **Debrid**          |                       ✅ RD/AD/PM/TB                        |                     ✅ RD/AD/PM/TB                      |                       ✅ RD/AD/PM/TB                        |
-| **External player** |                           ✅ MPV                            |                           ❌                            |                             ✅                              |
-| **Extra**           |               Profiles, sync, cross-platform                |            Also does Jellyfin/Plex/Emby/IPTV            |                       Docker, Usenet                        |
+### Jellyfin Android TV Clients
 
-### 🏛️ Media Centers
-
-**Kodi** — [GitHub](https://github.com/xbmc/xbmc) · GPL-2.0 · ✅ Native ATV
-
-- Thousands of Python addons for streaming, scrapers, subtitles, skins
-- Stremio addons via Stremio2Kodi bridge
-- Supports everything: torrent, debrid, IPTV (PVR), SMB, NFS, WebDAV, UPnP, FTP
-- Dolby Atmos / TrueHD passthrough, audio DSP, RetroPlayer gaming
-- Heavy but unmatched power
-
-**Jellyfin Android TV** —
-[GitHub](https://github.com/jellyfin/jellyfin-androidtv) · GPL-2.0 · ✅ Native
-ATV
-
-- Client for self-hosted Jellyfin media server
-- Server plugins for Trakt, metadata, subtitles
-- External player support (MPV)
-- Best FOSS media server ecosystem (52.6k★ on server repo)
-
-### ▶️ Media Players
-
-| App                   | GitHub                                                                    |  License   |     ATV     |  Subs  | Trakt | Protocols               |
-| --------------------- | ------------------------------------------------------------------------- | :--------: | :---------: | :----: | :---: | ----------------------- |
-| **VLC for ATV**       | [videolan/vlc](https://github.com/videolan/vlc)                           |  LGPL-2.1  |  ✅ Native  | ✅ All |  ❌   | SMB/NFS/UPnP/HTTP/DLNA  |
-| **Nova Video Player** | [nova-video-player/aos-AVP](https://github.com/nova-video-player/aos-AVP) |  GPL-3.0   |  ✅ Native  |   ✅   |  ✅   | SMB/NFS/UPnP/WebDAV/FTP |
-| **Just Player**       | [moneytoo/Player](https://github.com/moneytoo/Player)                     | Unlicense  | ⚠️ Sideload |   ✅   |  ❌   | File picker             |
-| **Next Player**       | [anilbeesetti/nextplayer](https://github.com/anilbeesetti/nextplayer)     | Apache-2.0 | ⚠️ Sideload |   ✅   |  ❌   | File picker/DASH/HLS    |
-
-### ⚡ Debrid-Focused
-
-| App           | GitHub                                                                                      | Debrid Services                   | Highlights                                                                               |
-| ------------- | ------------------------------------------------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------- |
-| **Flixorent** | [Hashaleen420/Flixorent](https://github.com/Hashaleen420/Flixorent)                         | RD, AD, Premiumize (beta), TorBox | Built-in Torrentio = zero config. Auto-rank 4K→1080p→720p. Chromecast. Apache 2.0        |
-| **Debrify**   | [varunsalian/debrify](https://github.com/varunsalian/debrify)                               | RD, TorBox, PikPak                | Stremio addons + debrid manager + mpv player + Jackett/Prowlarr plugins + download queue |
-| **Unchained** | [LivingWithHippos/unchained-android](https://github.com/LivingWithHippos/unchained-android) | RD only                           | Mature (since 2020). F-Droid. Jackett/Prowlarr search. External player. Not TV-optimized |
-
-### 🎬 YouTube (Ad-Free)
-
-| App           | GitHub                                                        |     ATV     | What Makes It Special                                                          |
-| ------------- | ------------------------------------------------------------- | :---------: | ------------------------------------------------------------------------------ |
-| **SmartTube** | [yuliskov/SmartTube](https://github.com/yuliskov/SmartTube)   |  ✅ Native  | 4K/HDR, SponsorBlock, no ads, return dislikes, background play. The king. 29k★ |
-| **Clipious**  | [lamarios/clipious](https://github.com/lamarios/clipious)     |  ✅ Native  | Invidious client, SponsorBlock+DeArrow, audio-only mode, downloads             |
-| **SkyTube**   | [SkyTubeTeam/SkyTube](https://github.com/SkyTubeTeam/SkyTube) | ⚠️ Sideload | No Google account needed, no tracking, channel blocklist, OPML                 |
-
-### 📡 IPTV
-
-| App             | GitHub                                                                  |    ATV    | Engine                                   | Features                                                                          |
-| --------------- | ----------------------------------------------------------------------- | :-------: | ---------------------------------------- | --------------------------------------------------------------------------------- |
-| **OwnTV**       | [ahXN00/OwnTV](https://github.com/ahXN00/OwnTV)                         | ✅ Native | Dual: libmpv (movies) + ExoPlayer (live) | Xtream + M3U, fast switching, beautiful modern UI                                 |
-| **Strix**       | [isnow-git/strix](https://github.com/isnow-git/strix)                   | ✅ Native | ExoPlayer                                | Built for low-RAM budget TVs. Clean Compose. Apache 2.0                           |
-| **DangoPlayer** | [brunochanrio/DangoPlayer](https://github.com/brunochanrio/DangoPlayer) | ✅ Native | ExoPlayer                                | DRM, PiP, Google Live Channels integration, M3U/PLS                               |
-| **Fermata**     | [AndreyPavlenko/Fermata](https://github.com/AndreyPavlenko/Fermata)     | ✅ Native | Pluggable (MP/Exo/VLC)                   | IPTV + EPG, YouTube + SponsorBlock, network folders, CUE sheets. Swiss Army knife |
-
-### 🟣 Twitch
-
-| App               | GitHub                                                        |       ATV       | Features                                                          |
-| ----------------- | ------------------------------------------------------------- | :-------------: | ----------------------------------------------------------------- |
-| **S0undTV**       | [S0und/S0undTV](https://github.com/S0und/S0undTV)             |    ✅ Native    | Ad-free, chat, BTTV/FFZ/7TV emotes, VOD support                   |
-| **SmartTwitchTV** | [fgl27/SmartTwitchTV](https://github.com/fgl27/SmartTwitchTV) |    ✅ Native    | Web-based, on Google Play, lightweight                            |
-| **ThystTV**       | [tzii/ThystTV](https://github.com/tzii/ThystTV)               | ✅ Large-screen | Floating chat overlay, watch history stats, Xtra fork with polish |
-
-### 🎌 Anime
-
-| App            | GitHub                                                            |     ATV     | System             | Features                                                                    |
-| -------------- | ----------------------------------------------------------------- | :---------: | ------------------ | --------------------------------------------------------------------------- |
-| **Aniyomi**    | [aniyomiorg/aniyomi](https://github.com/aniyomiorg/aniyomi)       | ⚠️ Sideload | APK extensions     | MAL/Anilist, MPV/VLC, video + manga. Tachiyomi fork with streaming          |
-| **Miru**       | [miru-project/miru-app](https://github.com/miru-project/miru-app) | ⚠️ Sideload | JS extensions      | Video/comics/novels. v2+ has ATV support                                    |
-| **Hikari**     | [Hflott/hikari_app](https://github.com/Hflott/hikari_app)         |  ✅ Native  | HAP addon protocol | AniList sync, torrent streaming, batch series packs. Excellent code quality |
-| **OpenStream** | [Ivorisnoob/OpenStream](https://github.com/Ivorisnoob/OpenStream) |   ✅ ATV    | HLS via WebView    | Material 3, TMDB metadata, Clean Architecture                               |
-
-### 📊 Tracking
-
-| App                   | GitHub                                                        |    ATV    | Services                                                    |
-| --------------------- | ------------------------------------------------------------- | :-------: | ----------------------------------------------------------- |
-| **NyanTV**            | [NyanTV/NyanTV](https://github.com/NyanTV/NyanTV)             | ✅ Native | AniList + MyAnimeList + Simkl. Purpose-built for Android TV |
-| **Trakt for Android** | [trakt/trakt-android](https://github.com/trakt/trakt-android) | ✅ Native | Official Trakt client for Android + ATV                     |
+| Client          | GitHub                                                                          |  ★   | Features                                                          |
+| --------------- | ------------------------------------------------------------------------------- | :--: | ----------------------------------------------------------------- |
+| **Official**    | [jellyfin/jellyfin-androidtv](https://github.com/jellyfin/jellyfin-androidtv)   | 4.2k | Direct Play, transcode, live TV, trickplay                        |
+| **Findroid**    | [jarnedemeulemeester/findroid](https://github.com/jarnedemeulemeester/findroid) |  —   | Native Android, Jetpack Compose, phone-first                      |
+| **Findroid CE** | [midasvo/findroid-ce](https://github.com/midasvo/findroid-ce)                   |  —   | Bleeding-edge fork, Dolby Vision, subtitle styles                 |
+| **Wholphin**    | [damontecres/Wholphin](https://github.com/damontecres/Wholphin)                 | ~500 | Plex-style UI, Android TV native, ExoPlayer                       |
+| **JellyPlay**   | [raulshma/jellyplay](https://github.com/raulshma/jellyplay)                     |  —   | Triple engine (Exo/mpv/VLC), SyncPlay, IPTV, downloads            |
+| **AFinity**     | [MakD/AFinity](https://github.com/MakD/AFinity)                                 |  —   | Compose + LibMPV, modern UI                                       |
+| **Gelli**       | [dkanada/gelli](https://github.com/dkanada/gelli)                               |  —   | Jellyfin music, phone                                             |
+| **Sinema**      | [visorcraft/Sinema](https://github.com/visorcraft/Sinema) 24★                   |  —   | **Android TV client for Stash**. D-pad, PIN lock, resume. GPL-3.0 |
 
 ---
 
-## 💎 Hidden Gems Worth Knowing
+## 🎬 All-in-One Streaming Apps
 
-Projects under 500★ that punch above their weight.
+Apps with their own scraper/provider system OR built-in streaming (not just
+Stremio wrappers).
 
-|  #  | App               |  ★  | What Makes It Special                                                                                             |
-| :-: | ----------------- | :-: | ----------------------------------------------------------------------------------------------------------------- |
-|  1  | **Nexio**         | 19  | Full Stremio addons + companion web portal + debrid-aware. 49 releases in 3 months. Cross-device sync via web     |
-|  2  | **OwnTV**         | 225 | Dual-engine IPTV (libmpv + ExoPlayer). 17 releases in one month. Explosive growth. Beautiful ATV UI               |
-|  3  | **Flixorent**     | 90  | Zero-config debrid — built-in Torrentio. Supports RD/AD/PM/TB. Chromecast. Apache 2.0                             |
-|  4  | **Hikari**        |  2  | Custom HAP addon protocol for anime torrents. AniList sync. Batch series packs. Engineering quality is stellar    |
-|  5  | **NyanTV**        | 64  | Only tracking app purpose-built for Android TV. AniList + MAL + Simkl. Beautiful Compose UI                       |
-|  6  | **Strix**         |  0  | Best code quality found. Built for low-RAM TVs. Clean. Apache 2.0                                                 |
-|  7  | **JellyPlay**     | new | Most feature-rich Jellyfin client. Triple engine. SyncPlay. Jellyseerr integration. IPTV. Overkill but impressive |
-|  8  | **LitPlayer**     | 176 | Supports SMB + WebDAV + FTP + Jellyfin + UPnP. Material 3. Separate TV build. Lite variant for old devices        |
-|  9  | **Cineflux**      | new | Native libtorrent4j on ATV. Letterboxd categories. Transmission integration. MIT                                  |
-| 10  | **ThystTV**       | 24  | Polish-focused Twitch client. Floating chat. Watch history stats. AGPL-3.0                                        |
-| 11  | **Aperture**      |  8  | Brand new Material 3 media player. Compose for TV. Clean. Has a Discord                                           |
-| 12  | **Lumera**        | 201 | Full Stremio addons + account import. IntroDb skip. Source switching mid-playback                                 |
-| 13  | **Debrify**       | 312 | Stremio addons + debrid manager built-in. Cross-platform. Jackett/Prowlarr search                                 |
-| 14  | **Sozo**          | 27  | Only non-fork app that loads CloudStream .cs3 plugins natively. Flutter. ~70/73 plugins work                      |
-| 15  | **Laposa Player** |  3  | 30MB. NFS+SMB+SFTP. No cache growth. MIT. Perfect for low-storage TVs                                             |
+| App               | GitHub                                                                          |   ★   | License | ATV | Source                                                   |
+| ----------------- | ------------------------------------------------------------------------------- | :---: | :-----: | :-: | -------------------------------------------------------- |
+| **CloudStream 3** | [recloudstream/cloudstream](https://github.com/recloudstream/cloudstream)       | 10.1k | GPL-3.0 | ✅  | .cs3 plugins + StremioX bridge                           |
+| **Cinema-HQ**     | [Inside4ndroid/Cinema-HQ](https://github.com/Inside4ndroid/Cinema-HQ) 50★       |   —   |    —    | ✅  | Movies, TV, Live TV, XXX. Own scrapers. Active Jul 2026  |
+| **flixquest**     | [BeamlakAschalew/flixquest](https://github.com/BeamlakAschalew/flixquest)       |  344  | GPL-3.0 | ⚠️  | Flutter, movies+TV, open source                          |
+| **Tokeii**        | [Sovan22/Tokeii](https://github.com/Sovan22/Tokeii)                             |  159  |    —    | ✅  | Kotlin, movie/TV streaming. Last push Mar 2024 (stale)   |
+| **youplex**       | [steveyout/youplex-apk](https://github.com/steveyout/youplex-apk)               |  35   |    —    | ✅  | Cross-platform (Android/iOS/ATV)                         |
+| **moviedog**      | [ratanparai/moviedog](https://github.com/ratanparai/moviedog)                   |  21   |    —    | ✅  | Free movie streaming for Android TV                      |
+| **Streamflix**    | [streamflix-reborn/streamflix](https://github.com/streamflix-reborn/streamflix) |  712  |    —    | ✅  | Scraper-based, own sources                               |
+| **Cinetry**       | [gstory0404/Cinetry](https://github.com/gstory0404/Cinetry)                     | 300+  |    —    | ✅  | Jellyfin + Emby + IPTV + Webdav + CMS. Cross-platform    |
+| **GhostenPlayer** | [GhostenEditor/Ghosten-Player](https://github.com/GhostenEditor/Ghosten-Player) | 800+  |    —    | ✅  | Cloud drive + IPTV + metadata scraping + file management |
 
----
+### Inside4ndroid Ecosystem
 
-## 🔍 Feature Comparison
-
-| App               |     OS     | ATV |  Remote  |      Stremio Addon      | CS Plugin | Own Plugins  | Trakt | Sync | Ext Player | Subs  |
-| ----------------- | :--------: | :-: | :------: | :---------------------: | :-------: | :----------: | :---: | :--: | :--------: | :---: |
-| **NuvioTV**       |  GPL-3.0   | ✅  | ⭐⭐⭐⭐ |         ✅ Full         |    ❌     |   Stremio    |  ✅   |  ✅  |   ✅ MPV   |  ✅   |
-| **ARVIO**         | Apache-2.0 | ✅  | ⭐⭐⭐⭐ |         ✅ Full         |    ❌     |   Stremio    |  ✅   |  ✅  |     ❌     |  ✅   |
-| **MediaStorm**    |    OSS     | ✅  |  ⭐⭐⭐  |         ✅ Full         |    ❌     |   Stremio    |  ✅   |  ✅  |     ✅     |  ✅   |
-| **Kodi**          |  GPL-2.0   | ✅  | ⭐⭐⭐⭐ |        ⚠️ Bridge        |    ❌     | 1000s Python |  ✅   |  ✅  |     ✅     |  ✅   |
-| **Jellyfin ATV**  |  GPL-2.0   | ✅  | ⭐⭐⭐⭐ |           ❌            |    ❌     | Server plugs |  ✅   |  ✅  |   ✅ MPV   |  ✅   |
-| **CloudStream 3** |  GPL-3.0   | ✅  |   ⭐⭐   |        ⚠️ Plugin        |    ✅     |     .cs3     |  ✅   |  ❌  | ✅ MPV/VLC |  ✅   |
-| **Flixorent**     | Apache-2.0 | ✅  |  ⭐⭐⭐  | ❌ (built-in Torrentio) |    ❌     |      No      |  ❌   |  ❌  | ✅ VLC/MX  |  ✅   |
-| **Debrify**       |   Custom   | ✅  |  ⭐⭐⭐  |         ✅ Full         |    ❌     |   Jackett    |  ✅   |  ❌  |   ✅ mpv   |  ✅   |
-| **VLC ATV**       |  LGPL-2.1  | ✅  | ⭐⭐⭐⭐ |           ❌            |    ❌     |      No      |  ❌   |  ❌  |     No     |  ✅   |
-| **Nova Player**   |  GPL-3.0   | ✅  |  ⭐⭐⭐  |           ❌            |    ❌     |      No      |  ✅   |  ❌  |     No     |  ✅   |
-| **SmartTube**     |    MIT     | ✅  | ⭐⭐⭐⭐ |           ❌            |    ❌     |      No      |  ❌   |  ✅  |     No     | ✅ YT |
-| **OwnTV**         |  GPL-3.0   | ✅  | ⭐⭐⭐⭐ |           ❌            |    ❌     |      No      |  ❌   |  ❌  |     No     |  ❌   |
-| **Sozo**          |     ❓     | ✅  |   ⭐⭐   |           ❌            |  ✅ Full  |      CS      |  ❌   |  ❌  |     ❓     |  ❓   |
-| **Miru**          |  AGPL-3.0  | ⚠️  |   ⭐⭐   |           ❌            |    ❌     |    JS ext    |  ❌   |  ❌  |     No     |  ❌   |
-
-### Debrid Services
-
-| App            | Real-Debrid |  AllDebrid  | Premiumize  |   TorBox    |
-| :------------- | :---------: | :---------: | :---------: | :---------: |
-| **NuvioTV**    |     ✅      |     ✅      |     ✅      |     ✅      |
-| **ARVIO**      |     ✅      |     ✅      |     ✅      |     ✅      |
-| **MediaStorm** |     ✅      |     ✅      |     ✅      |     ✅      |
-| **Flixorent**  |     ✅      |     ✅      |   ⚠️ Beta   |     ✅      |
-| **Debrify**    |     ✅      |     ❌      |     ❌      |     ✅      |
-| **Unchained**  |     ✅      |     ❌      |     ❌      |     ❌      |
-| **Kodi**       | ✅ (addons) | ✅ (addons) | ✅ (addons) | ✅ (addons) |
-
-### Protocols
-
-| App              |  Torrent  |    IPTV     |    SMB    |    NFS    |  WebDAV   | UPnP |    FTP    |
-| :--------------- | :-------: | :---------: | :-------: | :-------: | :-------: | :--: | :-------: |
-| **Kodi**         | ✅ addons |   ✅ PVR    |    ✅     |    ✅     |    ✅     |  ✅  |    ✅     |
-| **Jellyfin ATV** |    ❌     |  ✅ server  | ✅ server | ✅ server | ✅ server |  ❌  | ✅ server |
-| **VLC ATV**      |    ❌     | ✅ playlist |    ✅     |    ❌     |    ✅     |  ✅  |    ❌     |
-| **Nova Player**  |    ❌     |     ❌      |    ✅     |    ✅     |    ✅     |  ✅  |    ✅     |
-| **LitPlayer**    |    ❌     |     ❌      |    ✅     |    ❌     |    ✅     |  ✅  |    ✅     |
-| **Fermata**      |    ❌     |  ✅ addon   |    ✅     |    ❌     |    ❌     |  ❌  |    ✅     |
+| Project                        | GitHub                                                                                                  |  ★  | What It Does                                                                                          |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------- | :-: | ----------------------------------------------------------------------------------------------------- |
+| **Cinema-HQ**                  | [Inside4ndroid/Cinema-HQ](https://github.com/Inside4ndroid/Cinema-HQ)                                   | 50  | Android streaming app with movies, TV, live TV. Own scrapers                                          |
+| **TMDB-Embed-API**             | [Inside4ndroid/TMDB-Embed-API](https://github.com/Inside4ndroid/TMDB-Embed-API)                         | 121 | Streaming metadata + source aggregation API. Plugin system with providers (ShowBox, Vidsrc, etc). MIT |
+| **M3U-XCAPI-EPG-IPTV-Stremio** | [Inside4ndroid/M3U-XCAPI-EPG-IPTV-Stremio](https://github.com/Inside4ndroid/M3U-XCAPI-EPG-IPTV-Stremio) | 148 | Stremio addon: IPTV M3U/XC/EPG with config UI, LRU+Redis caching, multi-user                          |
+| **ResolveURL**                 | [Inside4ndroid/ResolveURL](https://github.com/Inside4ndroid/ResolveURL)                                 |  —  | Fork of UrlResolver for XBMC/Kodi. GPL-2.0                                                            |
+| **zyphera-plugins**            | [Inside4ndroid/zyphera-plugins](https://github.com/Inside4ndroid/zyphera-plugins)                       |  —  | Plugin repo for Zyphera streaming app                                                                 |
 
 ---
 
-## 🚫 What Does NOT Support These Addons
+## 📡 IPTV Players
+
+### Actively Maintained
+
+| App                        | GitHub                                                                                  |  ★   |  ATV   |      Engine       | Features                                                             |
+| -------------------------- | --------------------------------------------------------------------------------------- | :--: | :----: | :---------------: | -------------------------------------------------------------------- |
+| **mytv-android**           | [mytv-android/mytv-android](https://github.com/mytv-android/mytv-android)               | 2.4k |   ✅   |  Media3/IJK/VLC   | Material 3, Leanback, full IPTV                                      |
+| **xplayer**                | [TNT-Likely/xplayer](https://github.com/TNT-Likely/xplayer)                             | 1k+  |   ✅   |     ExoPlayer     | Flutter, Android/iOS/macOS/Win, EPG, iptv-org sources                |
+| **Extreme-InfiniTV**       | [infinitel8p/Extreme-InfiniTV](https://github.com/infinitel8p/Extreme-InfiniTV)         | 500+ |   ✅   |         —         | Xtream + M3U, EPG, offline downloads. Cross-platform                 |
+| **M3UAndroid**             | [oxyroid/M3UAndroid](https://github.com/oxyroid/M3UAndroid)                             | 500+ |   ✅   |         —         | Clean, ad-free, simple                                               |
+| **OwnTV**                  | [ahXN00/OwnTV](https://github.com/ahXN00/OwnTV)                                         | 225  |   ✅   | Dual (libmpv+Exo) | Beautiful UI, 17 releases in first month                             |
+| **ultra-tv**               | [khalilbenaz/ultra-tv](https://github.com/khalilbenaz/ultra-tv)                         |  40  |   ✅   |         —         | Xtream, M3U, Stalker. HLS/DASH/MPEG-TS. EPG, DVR, Cast               |
+| **Prysm**                  | [dereferencex/prysm](https://github.com/dereferencex/prysm)                             |  30  |   ✅   |     ExoPlayer     | React Native, lightweight, M3U                                       |
+| **CosmiTV**                | [cosmiquest/CosmiTV](https://github.com/cosmiquest/CosmiTV)                             | ~100 |   ✅   |     ExoPlayer     | IPTV DVR: rewind/FF live TV, schedule recordings. Stalker/Xtream/M3U |
+| **StreamVault-IPTV**       | [Davidona/StreamVault-IPTV](https://github.com/Davidona/StreamVault-IPTV)               | ~100 |   ✅   |      Media3       | Kotlin + Compose + Room + Hilt. TV-first                             |
+| **Fermata**                | [AndreyPavlenko/Fermata](https://github.com/AndreyPavlenko/Fermata)                     | 500+ |   ✅   |     Plugable      | IPTV+EPG, YouTube+SponsorBlock, network folders, pluggable engines   |
+| **DangoPlayer**            | [brunochanrio/DangoPlayer](https://github.com/brunochanrio/DangoPlayer)                 | ~200 |   ✅   |     ExoPlayer     | IPTV + PiP + Live Channels integration + DRM                         |
+| **PipTV**                  | [juniorbarrigana/PipTV](https://github.com/juniorbarrigana/PipTV)                       |  20  | ✅ PiP |      Media3       | M3U/HLS + YouTube floating overlay. Compose for TV                   |
+| **foss-tv-player-android** | [jaime-grj/foss-tv-player-android](https://github.com/jaime-grj/foss-tv-player-android) | ~50  |   ✅   |         —         | Live streams from JSON config. Leanback UI                           |
+| **Strix**                  | [isnow-git/strix](https://github.com/isnow-git/strix)                                   |  0   |   ✅   |     ExoPlayer     | Built for low-RAM budget TVs. Apache 2.0. Excellent code             |
+| **ChuchPlayer**            | [avalos010/ChuchPlayer](https://github.com/avalos010/ChuchPlayer)                       | ~50  |   ✅   |     ExoPlayer     | M3U/Xtream, EPG, catchup                                             |
+
+### Chinese IPTV Apps (Popular but non-English)
+
+| App              | GitHub                                                                |  ★   | Notes                             |
+| ---------------- | --------------------------------------------------------------------- | :--: | --------------------------------- |
+| **my-tv**        | [lizongying/my-tv](https://github.com/lizongying/my-tv)               | 5k+  | Chinese live TV, install and play |
+| **my-tv-0**      | [lizongying/my-tv-0](https://github.com/lizongying/my-tv-0)           | 2k+  | Custom video sources              |
+| **easy_tv_live** | [aiyakuaile/easy_tv_live](https://github.com/aiyakuaile/easy_tv_live) | 200+ | Lightweight IPTV, cross-platform  |
+
+---
+
+## ⚡ Debrid Tools & Players
+
+| App                     | GitHub                                                                                                |  ★   |      Debrid      | Features                                                              |
+| ----------------------- | ----------------------------------------------------------------------------------------------------- | :--: | :--------------: | --------------------------------------------------------------------- |
+| **Flixorent**           | [Hashaleen420/Flixorent](https://github.com/Hashaleen420/Flixorent)                                   |  90  | RD/AD/PM/TorBox  | Built-in Torrentio. Zero config. Chromecast. P2P fallback. Apache 2.0 |
+| **Debrify**             | [varunsalian/debrify](https://github.com/varunsalian/debrify)                                         | 312  | RD/TorBox/PikPak | Stremio addons + mpv + download queue + Jackett/Prowlarr              |
+| **Unchained**           | [LivingWithHippos/unchained-android](https://github.com/LivingWithHippos/unchained-android)           | 618  |     RD only      | F-Droid, Jackett/Prowlarr, mature (since 2020), not TV-optimized      |
+| **RDTClient**           | [rogerfar/rdt-client](https://github.com/rogerfar/rdt-client)                                         |  —   |     RD/AD/TB     | Debrid torrent proxy, Web UI                                          |
+| **Zurg**                | [debridmediamanager/zurg](https://github.com/debridmediamanager/zurg)                                 |  —   |        RD        | WebDAV for debrid, mount via rclone                                   |
+| **DMM**                 | [debridmediamanager/debrid-media-manager](https://github.com/debridmediamanager/debrid-media-manager) | 1.4k |     RD/AD/TB     | Web app, download to cloud, no storage limits                         |
+| **StremThru**           | [MunifTanjim/stremthru](https://github.com/MunifTanjim/stremthru)                                     |  —   |   9 providers    | Unified debrid API                                                    |
+| **Debrid Media Bridge** | (community)                                                                                           |  —   |     RD/AD/PM     | Bridges debrid to media apps                                          |
+| **elfhosted**           | [ElfHosted](https://elfhosted.com)                                                                    |  —   |       All        | Managed hosting for debrid stack                                      |
+
+---
+
+## ▶️ Media Players
+
+| App                   | GitHub                                                                    |   ★   | ATV |  Subs  | Trakt | Protocols                    |
+| --------------------- | ------------------------------------------------------------------------- | :---: | :-: | :----: | :---: | ---------------------------- |
+| **VLC for ATV**       | [videolan/vlc](https://github.com/videolan/vlc)                           | 16.1k | ✅  | ✅ All |  ❌   | SMB/NFS/UPnP/HTTP/DLNA       |
+| **Nova Video Player** | [nova-video-player/aos-AVP](https://github.com/nova-video-player/aos-AVP) | 4.5k  | ✅  |   ✅   |  ✅   | SMB/NFS/UPnP/WebDAV/FTP      |
+| **Just Player**       | [moneytoo/Player](https://github.com/moneytoo/Player)                     | 2.5k  | ⚠️  |   ✅   |  ❌   | File picker                  |
+| **Next Player**       | [anilbeesetti/nextplayer](https://github.com/anilbeesetti/nextplayer)     | 4.1k  | ⚠️  |   ✅   |  ❌   | File picker/DASH/HLS         |
+| **LitPlayer**         | [daluobo/LitPlayer-release](https://github.com/daluobo/LitPlayer-release) |  176  | ✅  |   ✅   |  ❌   | SMB/WebDAV/FTP/Jellyfin/UPnP |
+| **Aperture**          | [XDanfr/Aperture](https://github.com/XDanfr/Aperture)                     |   8   | ✅  |   ✅   |  ❌   | Media3/ExoPlayer. M3-themed  |
+
+---
+
+## 🎬 YouTube / Twitch Clients
+
+| App               | GitHub                                                        |  ★   | ATV | What                                       |
+| ----------------- | ------------------------------------------------------------- | :--: | :-: | ------------------------------------------ |
+| **SmartTube**     | [yuliskov/SmartTube](https://github.com/yuliskov/SmartTube)   | 29k  | ✅  | 4K/HDR, SponsorBlock, no ads. The king     |
+| **Clipious**      | [lamarios/clipious](https://github.com/lamarios/clipious)     | 1k+  | ✅  | Invidious client, SponsorBlock+DeArrow     |
+| **SkyTube**       | [SkyTubeTeam/SkyTube](https://github.com/SkyTubeTeam/SkyTube) | 2.7k | ⚠️  | No Google account, no tracking             |
+| **S0undTV**       | [S0und/S0undTV](https://github.com/S0und/S0undTV)             | 2k+  | ✅  | Twitch: ad-free, chat, BTTV/FFZ/7TV        |
+| **SmartTwitchTV** | [fgl27/SmartTwitchTV](https://github.com/fgl27/SmartTwitchTV) | 1k+  | ✅  | Twitch web client on Google Play           |
+| **ThystTV**       | [tzii/ThystTV](https://github.com/tzii/ThystTV)               |  24  | ✅  | Improved Xtra fork, floating chat AGPL-3.0 |
+
+---
+
+## 🎌 Anime
+
+| App            | GitHub                                                            |  ★   | ATV | Engine                                               |
+| -------------- | ----------------------------------------------------------------- | :--: | :-: | ---------------------------------------------------- |
+| **Aniyomi**    | [aniyomiorg/aniyomi](https://github.com/aniyomiorg/aniyomi)       | 5k+  | ⚠️  | APK extensions, MAL/Anilist, MPV/VLC                 |
+| **Miru**       | [miru-project/miru-app](https://github.com/miru-project/miru-app) | 5.5k | ⚠️  | JS extensions, v2+ ATV                               |
+| **Hikari**     | [Hflott/hikari_app](https://github.com/Hflott/hikari_app)         |  2   | ✅  | HAP addon protocol, torrent, AniList. Excellent code |
+| **Saikou**     | [saikou-app/saikou](https://github.com/saikou-app/saikou)         |  —   | ⚠️  | Anime + manga                                        |
+| **OpenStream** | [Ivorisnoob/OpenStream](https://github.com/Ivorisnoob/OpenStream) |  7   | ✅  | Material 3, TMDB, Clean Architecture                 |
+| **MiruShin**   | [emp0ry/MiruShin](https://github.com/emp0ry/MiruShin)             |  —   | ✅  | Flutter, AniList/MAL/Shikimori, AniSkip, PiP         |
+| **Dantotsu**   | (check)                                                           |  —   | ⚠️  | Anilist-focused Tachiyomi fork                       |
+
+---
+
+## 📊 Tracking & Discovery
+
+| App               | GitHub                                                        |  ★  | ATV | Services                                       |
+| ----------------- | ------------------------------------------------------------- | :-: | :-: | ---------------------------------------------- |
+| **NyanTV**        | [NyanTV/NyanTV](https://github.com/NyanTV/NyanTV)             | 64  | ✅  | AniList + MAL + Simkl. Only ATV-native tracker |
+| **Trakt Android** | [trakt/trakt-android](https://github.com/trakt/trakt-android) | 43  | ✅  | Official Trakt client for ATV                  |
+
+---
+
+## 💎 Hidden Gems (<500★)
+
+Projects that deserve attention but are under the radar.
+
+|  #  | App                        |  ★   | Why It's Special                                                          |
+| :-: | -------------------------- | :--: | ------------------------------------------------------------------------- |
+|  1  | **Nexio**                  |  19  | Stremio addons + web portal + debrid. 49 releases in 3mo. Insane velocity |
+|  2  | **OwnTV**                  | 225  | Dual-engine IPTV. Explosive growth. Beautiful                             |
+|  3  | **Flixorent**              |  90  | Zero-config debrid. Built-in Torrentio. Chromecast                        |
+|  4  | **Hikari**                 |  2   | Custom HAP protocol for anime torrents. Stellar code quality              |
+|  5  | **NyanTV**                 |  64  | Only ATV-native tracker. AniList/MAL/Simkl                                |
+|  6  | **Strix**                  |  0   | Best code quality found. Low-RAM TV focus. Apache 2.0                     |
+|  7  | **JellyPlay**              | new  | Most feature-rich Jellyfin client. Triple engine. SyncPlay                |
+|  8  | **LitPlayer**              | 176  | Everything: SMB/WebDAV/FTP/Jellyfin/UPnP. Separate TV build               |
+|  9  | **Cineflux**               | new  | Native libtorrent4j on ATV. Letterboxd categories                         |
+| 10  | **ThystTV**                |  24  | Polish-focused Twitch. AGPL-3.0. Floating chat                            |
+| 11  | **Aperture**               |  8   | New M3 media player. Compose for TV. Clean                                |
+| 12  | **Lumera**                 | 201  | Full Stremio addons + account import + IntroDb                            |
+| 13  | **Sozo**                   |  27  | Only non-fork CS .cs3 loader. ~70/73 plugins work                         |
+| 14  | **Sinema**                 |  24  | Stash client for ATV. D-pad, PIN, resume. GPL-3.0                         |
+| 15  | **Cinema-HQ**              |  50  | Own scrapers, movies/TV/live. Active Jul 2026                             |
+| 16  | **flixquest**              | 344  | Flutter open-source streaming. GPL-3.0                                    |
+| 17  | **Prysm**                  |  30  | React Native IPTV. Clean. Lightweight                                     |
+| 18  | **StreamVault-IPTV**       | ~100 | Compose + Room + Hilt + Media3. TV-first                                  |
+| 19  | **DangoPlayer**            | 200  | IPTV + PiP + Live Channels. Single-dev passion project                    |
+| 20  | **foss-tv-player-android** | ~50  | Simple live TV from JSON config. Leanback                                 |
+
+---
+
+## 🚫 What Does NOT Support
 
 ### No Stremio Addon Support
 
-| App                     | Their System                 | Notes                                               |
-| ----------------------- | ---------------------------- | --------------------------------------------------- |
-| **CinemaHD**            | Own scrapers                 | Effectively shut down early 2026                    |
-| **BeeTV**               | Own scrapers                 | Closed-source                                       |
-| **NovaTV**              | Own scrapers                 | Closed-source                                       |
-| **CyberFlix**           | Own scrapers                 | Defunct                                             |
-| **FilmPlus**            | Own scrapers                 | Closed-source                                       |
-| **TeaTV**               | Own scrapers                 | Closed-source                                       |
-| **PopcornTime**         | Built-in torrent scraper     | Desktop rewrite active, no ATV                      |
-| **HDO Box**             | Own sources                  | Closed-source                                       |
-| **OnStream**            | Own sources                  | Declining quality                                   |
-| **Weyd**                | Own provider packages        | Proprietary, paid                                   |
-| **Plex**                | Deprecated plugin system     | Proprietary                                         |
-| **Jellyfin**            | Server plugins               | Bridges exist TO Jellyfin from Stremio, not reverse |
-| **Infuse / VidHub**     | Cloud drives / Plex/Jellyfin | No addon system                                     |
-| **Flud / LibreTorrent** | None                         | Downloaders only                                    |
+| App                                       | Their System             | Notes                              |
+| ----------------------------------------- | ------------------------ | ---------------------------------- |
+| **CinemaHD**                              | Own scrapers             | Shut down early 2026               |
+| **BeeTV / NovaTV / FilmPlus / CyberFlix** | Own scrapers             | Closed-source                      |
+| **TeaTV**                                 | Own scrapers             | Closed-source                      |
+| **PopcornTime**                           | Built-in torrent scraper | Desktop rewrite only, no ATV       |
+| **HDO Box / OnStream**                    | Own sources              | Declining quality                  |
+| **Weyd**                                  | Provider packages        | Proprietary, paid                  |
+| **Plex**                                  | Deprecated plugins       | Proprietary                        |
+| **Jellyfin / Emby**                       | Server plugins           | Bridges exist TO them, not reverse |
+| **Infuse / VidHub**                       | Cloud drives / Plex      | No addon system                    |
+| **Flud / LibreTorrent**                   | None                     | Downloaders only                   |
+| **VLC / Nova Player / Just Player**       | None                     | Local media players only           |
 
 ### No CloudStream Plugin Support
 
-| App                            | Their System                     | Why Not                     |
-| ------------------------------ | -------------------------------- | --------------------------- |
-| **Miru**                       | JS extensions                    | Can't load DEX `.cs3` files |
-| **Aniyomi**                    | APK extensions (Tachiyomi-style) | Different format            |
-| **Stremio**                    | JSON addon manifests             | Different protocol          |
-| **Syncler**                    | Vendor packages                  | Proprietary format          |
-| **Kodi**                       | Python addons                    | No DEX classloader          |
-| **BeeTV / CinemaHD / HDO Box** | None / own scrapers              | No plugin system            |
+| App                              | Their System    | Why                |
+| -------------------------------- | --------------- | ------------------ |
+| **Miru**                         | JS extensions   | Can't load DEX     |
+| **Aniyomi**                      | APK extensions  | Different format   |
+| **Stremio**                      | JSON manifests  | Different protocol |
+| **Syncler**                      | Vendor packages | Proprietary        |
+| **Kodi**                         | Python addons   | No DEX classloader |
+| **Tokeii / flixquest / youplex** | Own scrapers    | Not CS-compatible  |
+
+---
+
+## 🔍 Comparison Table
+
+| App               |     OS     | ATV |  Remote  | Stremio Addon | CS Plugin | Trakt | Ext Player | Subs  |    Debrid    |
+| ----------------- | :--------: | :-: | :------: | :-----------: | :-------: | :---: | :--------: | :---: | :----------: |
+| **NuvioTV**       |  GPL-3.0   | ✅  | ⭐⭐⭐⭐ |      ✅       |    ❌     |  ✅   |   ✅ MPV   |  ✅   | RD/AD/PM/TB  |
+| **ARVIO**         | Apache-2.0 | ✅  | ⭐⭐⭐⭐ |      ✅       |    ❌     |  ✅   |     ❌     |  ✅   | RD/AD/PM/TB  |
+| **MediaStorm**    |    OSS     | ✅  |  ⭐⭐⭐  |      ✅       |    ❌     |  ✅   |     ✅     |  ✅   | RD/AD/PM/TB  |
+| **Kodi**          |  GPL-2.0   | ✅  | ⭐⭐⭐⭐ |   ⚠️ bridge   |    ❌     |  ✅   |     ✅     |  ✅   |  ✅ addons   |
+| **Jellyfin ATV**  |  GPL-2.0   | ✅  | ⭐⭐⭐⭐ |      ❌       |    ❌     |  ✅   |   ✅ MPV   |  ✅   |      ❌      |
+| **CloudStream 3** |  GPL-3.0   | ✅  |   ⭐⭐   |   ⚠️ plugin   |    ✅     |  ✅   | ✅ MPV/VLC |  ✅   |  ⚠️ limited  |
+| **Cinema-HQ**     |     —      | ✅  |   ⭐⭐   |      ❌       |    ❌     |  ❌   |     ❌     |  ❌   |      ❌      |
+| **flixquest**     |  GPL-3.0   | ⚠️  |   ⭐⭐   |      ❌       |    ❌     |  ❌   |     ❌     |  ❌   |      ❌      |
+| **Flixorent**     | Apache-2.0 | ✅  |  ⭐⭐⭐  | ❌(built-in)  |    ❌     |  ❌   | ✅ VLC/MX  |  ✅   | RD/AD/PM/TB  |
+| **Debrify**       |   Custom   | ✅  |  ⭐⭐⭐  |      ✅       |    ❌     |  ✅   |   ✅ mpv   |  ✅   | RD/TB/PikPak |
+| **Sozo**          |     ❓     | ✅  |   ⭐⭐   |      ❌       |    ✅     |  ❌   |     ❓     |  ❓   |      ❌      |
+| **VLC ATV**       |  LGPL-2.1  | ✅  | ⭐⭐⭐⭐ |      ❌       |    ❌     |  ❌   |     No     |  ✅   |      ❌      |
+| **Nova Player**   |  GPL-3.0   | ✅  |  ⭐⭐⭐  |      ❌       |    ❌     |  ✅   |     No     |  ✅   |      ❌      |
+| **SmartTube**     |    MIT     | ✅  | ⭐⭐⭐⭐ |      ❌       |    ❌     |  ❌   |     No     | ✅ YT |      ❌      |
+| **OwnTV**         |  GPL-3.0   | ✅  | ⭐⭐⭐⭐ |      ❌       |    ❌     |  ❌   |     No     |  ❌   |      ❌      |
 
 ---
 
@@ -284,63 +321,63 @@ Projects under 500★ that punch above their weight.
 
 ### Best Android TV Experience
 
-**ARVIO** — Purpose-built Leanback UI. Jellyfin + Plex + Emby + Stremio addons +
-IPTV in one app.  
-**NuvioTV** — Also excellent. Free profiles (Stremio charges $39/yr now).
-
-### Best FOSS Project Overall
-
-**Jellyfin** (52.6k★) — Most active, healthiest, most important FOSS media
-project. Complete server + ATV client.
-
-### Best Plugin Ecosystem
-
-**Kodi** — Thousands of addons. Stremio2Kodi bridge brings Stremio addons in.
-Nothing else is close.
+→ **ARVIO** — Jellyfin + Plex + Emby + Stremio addons + IPTV. One UI. Apache
+2.0.  
+→ **NuvioTV** — Stremio addons, free profiles, MPV, sync.
 
 ### Best Replacement for Stremio
 
-**NuvioTV** — Full Stremio addon compatibility. Free profiles. Cross-device
-sync. MPV. Trakt.  
-**ARVIO** — Better if you also use Jellyfin/Plex.
+→ **NuvioTV** — Full Stremio compat. Free profiles (Stremio now $39/yr).  
+→ **ARVIO** — Better if you also use Jellyfin/Plex.
 
 ### Best Replacement for CloudStream
 
-**CloudStream 3** (recloudstream) — Still actively maintained (commit today,
-10.1k★). No app comes close to its `.cs3` ecosystem. Android TV issues are
-acknowledged.  
-**Kodi + Stremio2Kodi** — More stable on ATV, uses Stremio addons through
-bridge.
+→ **CloudStream 3** (recloudstream) — Still active. Nothing else loads .cs3.  
+→ **Kodi + Stremio2Kodi** — More stable on ATV, uses Stremio addons.
+
+### Best Plugin Ecosystem
+
+→ **Kodi** — Thousands of addons + Stremio2Kodi bridge.
+
+### Best FOSS Project
+
+→ **Jellyfin** (52.6k★) — Healthiest OSS media project.
 
 ### Best Lightweight
 
-**Flixorent** — <70MB. Built-in Torrentio. Zero config. Debrid + P2P. Apache
-2.0.
+→ **Flixorent** — <70MB, built-in Torrentio, zero config.
 
 ### Best Power-User
 
-**Kodi** — Every protocol. Dolby Atmos passthrough. Audio DSP. RetroPlayer.
-PVR/DVR. Endless skins.
+→ **Kodi** — Every protocol, Atmos passthrough, RetroPlayer, PVR/DVR.
+
+### Best Hidden Gem
+
+→ **Nexio** — 19★ but 49 releases in 3mo. Stremio + web portal + debrid.
+
+### Best New Discovery
+
+→ **Sinema** (visorcraft/Sinema) — Stash client for Android TV. 24★. GPL-3.0.  
+→ **Cinema-HQ** (Inside4ndroid/Cinema-HQ) — 50★, own scrapers, live TV. Active.
 
 ### Recommended Combos
 
 ```
-# One App to Rule Them All
-ARVIO → add Jellyfin server + Stremio addon URLs + IPTV playlist
+# One App
+ARVIO → Jellyfin/Plex + Stremio addon URLs + IPTV playlist
 
 # Stremio Replacement
-NuvioTV (movies/TV via Stremio addons) + SmartTube (YouTube)
+NuvioTV + SmartTube
 
 # Self-Hosted Power
-Jellyfin Server → Riven (debrid automation) → ARVIO or Jellyfin ATV → Seerr (requests)
+Jellyfin Server → Riven (debrid) → ARVIO → Seerr (requests)
 
-# Budget / Low-End TV
-Flixorent (built-in Torrentio + RD, zero config) + SmartTube + OwnTV (IPTV)
+# Budget TV
+Flixorent (zero config debrid) + SmartTube + OwnTV (IPTV)
 
-# CloudStream Replacement
-CloudStream 3 (latest recloudstream) + Phisher repo + StremioX plugin
-OR
-Kodi + Stremio2Kodi + Stremio addons of choice
+# CloudStream
+CloudStream 3 (latest) + Phisher repo + StremioX plugin
+OR Kodi + Stremio2Kodi + Stremio addons
 ```
 
 ---
@@ -348,55 +385,34 @@ Kodi + Stremio2Kodi + Stremio addons of choice
 ## 🗺️ Ecosystem & Tools
 
 ```
-                    DEBRID SERVICES
-          (Real-Debrid · AllDebrid · Premiumize · TorBox)
-                        │
-        ┌───────────────┼───────────────┬───────────────┐
-        ▼               ▼               ▼               ▼
-   DEBRID TOOLS      SCRAPERS       AUTOMATION     TORRENT NATIVE
-   RDTClient        Torrentio       Riven          WebTorrent
-   Zurg (WebDAV)    Comet           (FUSE VFS)     Fluxstream
-   DMM              MediaFusion     Seerr          GoStream
-   StremThru        AIOStreams      Sonarr/Radarr  Stream Server
-        │               │               │               │
-        └───────────────┴───────────────┴───────────────┘
-                            │
-                      MEDIA SERVERS
-              Jellyfin (FOSS) · Plex (ref) · Emby
-                            │
-                            ▼
-                 ANDROID TV FRONTENDS
-        All-in-One              Single-Service
-        NuvioTV                 Jellyfin ATV
-        ARVIO                   SmartTube (YT)
-        Kodi                    VLC (local)
-        CloudStream 3           OwnTV (IPTV)
-        MediaStorm              Nova (local)
-        Flixorent               Sozo (CS)
+DEBRID: RD · AD · Premiumize · TorBox
+  ↓
+TOOLS: RDTClient · Zurg (WebDAV) · DMM · StremThru · ElfHosted
+  ↓
+SCRAPERS: Torrentio · Comet · MediaFusion · AIOStreams · Magnetio
+  ↓
+AUTOMATION: Riven (FUSE VFS) · Seerr · Sonarr/Radarr
+  ↓
+SERVERS: Jellyfin · Plex (ref) · Emby · Kodi (direct)
+  ↓
+FRONTENDS:
+  All-in-One: NuvioTV · ARVIO · Kodi · CloudStream 3 · MediaStorm · Cinema-HQ
+  Single: Jellyfin ATV · SmartTube · VLC · Nova · OwnTV · Flixorent
+  IPTV: mytv-android · xplayer · Extreme-InfiniTV · OwnTV · ultra-tv
+  Anime: Aniyomi · Miru · Hikari
+  Tracking: NyanTV · Trakt Android
+
+KEY INTEGRATIONS:
+  CloudStream 3 → Stremio addons via StremioX plugin (phisher repo)
+  Kodi → Stremio addons via Stremio2Kodi bridge
+  Syncler → Stremio addons via Providra bridge
+  Riven → FUSE VFS → Jellyfin scans as library
+  Zurg → rclone → Jellyfin (classic debrid mount)
+  Comet + StremThru → unified debrid API (9 providers)
 ```
 
-### Key Integrations
+---
 
-- **CloudStream 3** runs Stremio addons via StremioX/StremioC plugin (in phisher
-  repo)
-- **Kodi** runs Stremio addons via Stremio2Kodi bridge
-- **Syncler** runs Stremio addons via Providra bridge
-- **Riven** mounts FUSE VFS → Jellyfin scans it → automated pipeline
-- **Zurg + rclone → Jellyfin** = classic debrid mount stack
-- **Comet + StremThru** = unified debrid API for 9 providers
-- **ElfHosted** = managed hosting for Comet, MediaFusion, Riven, MediaStorm
-
-### Core Tools
-
-| Tool              | What It Does                                        | Link                                                                 |
-| ----------------- | --------------------------------------------------- | -------------------------------------------------------------------- |
-| **RDTClient**     | Debrid torrent client proxy                         | [GitHub](https://github.com/rogerfar/rdt-client)                     |
-| **Zurg**          | WebDAV for Real-Debrid                              | [GitHub](https://github.com/debridmediamanager/zurg)                 |
-| **DMM**           | Debrid Media Manager                                | [GitHub](https://github.com/debridmediamanager/debrid-media-manager) |
-| **StremThru**     | Unified debrid API (9 providers)                    | [GitHub](https://github.com/MunifTanjim/stremthru)                   |
-| **Comet**         | Stremio addon with multi-debrid                     | [GitHub](https://github.com/g0ldyy/comet)                            |
-| **MediaFusion**   | Universal Stremio addon                             | [GitHub](https://github.com/mhdzumair/MediaFusion)                   |
-| **Riven**         | Media automation (Plex debrid successor)            | [Site](https://riven.tv)                                             |
-| **Seerr**         | Media request manager (Overseerr+Jellyseerr merged) | [Site](https://seerr.dev)                                            |
-| **TorrServer**    | DHT torrent HTTP proxy                              | [GitHub](https://github.com/YouROK/TorrServer)                       |
-| **Stream Server** | Rust Stremio server replacement                     | [GitHub](https://github.com/perpetus/stream-server)                  |
+> **Research:** July 14, 2026 · 15 parallel GitHub search agents · 100+ repos
+> analyzed  
+> **Repo:** [github.com/thegnsme/android-tv-streaming-guide](https://github.com/thegnsme/android-tv-streaming-guide)
