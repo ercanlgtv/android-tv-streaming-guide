@@ -382,33 +382,93 @@ OR Kodi + Stremio2Kodi + Stremio addons
 
 ---
 
-## 🗺️ Ecosystem & Tools
+## ⚙️ Media Automation & Backend Tools
+
+Backend services that power your Android TV setup — request management, *arr
+automation, debrid, and indexing.
+
+### Request Management
+
+| Project        | GitHub                                                              |   ★   | What It Does                                                                                                            |
+| -------------- | ------------------------------------------------------------------- | :---: | ----------------------------------------------------------------------------------------------------------------------- |
+| **Seerr**      | [seerr-team/seerr](https://github.com/seerr-team/seerr)             | 11.6k | Unified media request manager. Merger of Overseerr + Jellyseerr. Supports Jellyfin, Plex, Emby. Web UI, mobile-friendly |
+| **Overseerr**  | [sct/overseerr](https://github.com/sct/overseerr)                   |  5k   | Original Plex request manager. **Archived Feb 2026** — superseded by Seerr                                              |
+| **Jellyseerr** | [fallenbagel/jellyseerr](https://github.com/fallenbagel/jellyseerr) |   —   | Jellyfin/Emby fork of Overseerr. Merged into Seerr                                                                      |
+
+### Torrent Indexing
+
+| Project      | GitHub                                                    |   ★   | What It Does                                                                  |
+| ------------ | --------------------------------------------------------- | :---: | ----------------------------------------------------------------------------- |
+| **Jackett**  | [Jackett/Jackett](https://github.com/Jackett/Jackett)     | 15.6k | API proxy for 500+ torrent trackers. Converts to Torznab API. C#. Very active |
+| **Prowlarr** | [Prowlarr/Prowlarr](https://github.com/Prowlarr/Prowlarr) |   —   | Sonarr-style indexer manager. Built-in NZB/torrent support                    |
+| **doorr**    | [Lifailon/doorr](https://github.com/Lifailon/doorr)       |  new  | **✅ Android TV** — search frontend for Prowlarr/Jackett. Flutter/Dart        |
+
+### *arr Mobile Clients (Direct Android TV Apps)
+
+| App            | GitHub                                                            | Services                                                                   | Notes                                     |
+| -------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------- |
+| **seekarr**    | [matthw-labs/seekarr](https://github.com/matthw-labs/seekarr)     | Seerr + Radarr + Sonarr + Lidarr + qBittorrent                             | Flutter, APK available                    |
+| **arr-client** | [Nicktronix/arr-client](https://github.com/Nicktronix/arr-client) | Sonarr & Radarr                                                            | Material Design 3, Android APK            |
+| **uniarr**     | [raulshma/uniarr](https://github.com/raulshma/uniarr)             | Sonarr, Radarr, Jellyseerr, qBittorrent, Jellyfin, Prowlarr, Bazarr, +more | React Native, 15+ services, offline-first |
+| **deckarr**    | [iregados/deckarr](https://github.com/iregados/deckarr)           | Radarr, Sonarr, Transmission                                               | Kotlin Multiplatform, Jetpack Compose     |
+
+### Debrid Automation
+
+| Project            | GitHub                                                                                                |   ★    | What It Does                                                                                                           |
+| ------------------ | ----------------------------------------------------------------------------------------------------- | :----: | ---------------------------------------------------------------------------------------------------------------------- |
+| **Riven**          | [rivenmedia/riven](https://github.com/rivenmedia/riven)                                               | active | Plex/Jellyfin/Emby debrid streaming. FUSE VFS. Scrapers: Comet, Jackett, Prowlarr, Torrentio. Successor to plex_debrid |
+| **Riven Frontend** | [rivenmedia/riven-frontend](https://github.com/rivenmedia/riven-frontend)                             | active | Web UI for Riven                                                                                                       |
+| **Riven TS**       | [rivenmedia/riven-ts](https://github.com/rivenmedia/riven-ts)                                         | active | TypeScript plugins for Riven                                                                                           |
+| **plex_debrid**    | [itsToggle/plex_debrid](https://github.com/itsToggle/plex_debrid)                                     |  1.6k  | **Archived.** Superseded by Riven                                                                                      |
+| **rdt-client**     | [rogerfar/rdt-client](https://github.com/rogerfar/rdt-client)                                         | large  | RD/AD/PM/TorBox/DebridLink torrent client. Fake qBittorrent API for *arr. Angular + .NET                               |
+| **Zurg**           | [debridmediamanager/zurg-testing](https://github.com/debridmediamanager/zurg-testing)                 | large  | Real-Debrid WebDAV server. Mount as filesystem for Plex/Jellyfin via rclone                                            |
+| **DMM**            | [debridmediamanager/debrid-media-manager](https://github.com/debridmediamanager/debrid-media-manager) |  1.4k  | Curate infinite media library. Search/download to RD/AD/TorBox. Stremio + Trakt integration                            |
+
+### Tracking & Discovery (Android)
+
+| App               | GitHub                                                                |  ★  | Services              | Notes                                      |
+| ----------------- | --------------------------------------------------------------------- | :-: | --------------------- | ------------------------------------------ |
+| **Trakt Android** | [trakt/trakt-android](https://github.com/trakt/trakt-android)         | 35  | Trakt                 | **✅ Official Android TV client**. GPL-3.0 |
+| **Showly**        | [michaldrabik/showly-2.0](https://github.com/michaldrabik/showly-2.0) | 1k  | Trakt                 | Modern OSS, no Google services. Kotlin     |
+| **NyanTV**        | [NyanTV/NyanTV](https://github.com/NyanTV/NyanTV)                     | 64  | AniList + MAL + Simkl | **✅ Only ATV-native multi-tracker**       |
+
+---
+
+## 🗺️ Full Ecosystem Map
 
 ```
-DEBRID: RD · AD · Premiumize · TorBox
+DEBRID: Real-Debrid · AllDebrid · Premiumize · TorBox · DebridLink
   ↓
-TOOLS: RDTClient · Zurg (WebDAV) · DMM · StremThru · ElfHosted
+SCRAPERS: Torrentio · Comet · MediaFusion · AIOStreams · Magnetio · Jackettio
   ↓
-SCRAPERS: Torrentio · Comet · MediaFusion · AIOStreams · Magnetio
+INDEXERS: Jackett (500 trackers) · Prowlarr · doorr (Android search frontend)
   ↓
-AUTOMATION: Riven (FUSE VFS) · Seerr · Sonarr/Radarr
+BACKEND:
+  Debrid:  RDTClient · Zurg (WebDAV) · DMM · StremThru · ElfHosted
+  *arr:    Sonarr · Radarr · Lidarr · Bazarr · Readarr
+  Mobile:  seekarr · arr-client · uniarr · deckarr
+  ↓
+AUTOMATION: Riven (FUSE VFS debrid → Plex/Jellyfin)
+  REQUEST:  Seerr (Overseerr + Jellyseerr merged)
   ↓
 SERVERS: Jellyfin · Plex (ref) · Emby · Kodi (direct)
   ↓
 FRONTENDS:
   All-in-One: NuvioTV · ARVIO · Kodi · CloudStream 3 · MediaStorm · Cinema-HQ
-  Single: Jellyfin ATV · SmartTube · VLC · Nova · OwnTV · Flixorent
-  IPTV: mytv-android · xplayer · Extreme-InfiniTV · OwnTV · ultra-tv
-  Anime: Aniyomi · Miru · Hikari
-  Tracking: NyanTV · Trakt Android
+  Single:     Jellyfin ATV · SmartTube · VLC · Nova · OwnTV · Flixorent
+  IPTV:       mytv-android · xplayer · Extreme-InfiniTV · OwnTV · ultra-tv
+  Anime:      Aniyomi · Miru · Hikari
+  Tracking:   NyanTV · Trakt Android · Showly
 
 KEY INTEGRATIONS:
   CloudStream 3 → Stremio addons via StremioX plugin (phisher repo)
-  Kodi → Stremio addons via Stremio2Kodi bridge
-  Syncler → Stremio addons via Providra bridge
-  Riven → FUSE VFS → Jellyfin scans as library
-  Zurg → rclone → Jellyfin (classic debrid mount)
+  Kodi         → Stremio addons via Stremio2Kodi bridge
+  Syncler      → Stremio addons via Providra bridge
+  Riven        → FUSE VFS → Jellyfin scans as library
+  Zurg         → rclone → Jellyfin (classic debrid mount)
   Comet + StremThru → unified debrid API (9 providers)
+  Seerr        → Radarr/Sonarr → Riven → Jellyfin/Plex (request → automate → stream)
+  doorr        → Prowlarr/Jackett → download on Android (search anywhere)
 ```
 
 ---
