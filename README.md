@@ -40,6 +40,12 @@
 | **Debrify**    | [varunsalian/debrify](https://github.com/varunsalian/debrify) 312★ |             ✅ TV              | Debrid manager + Stremio addons + mpv player + Jackett/Prowlarr                   |
 | **VortX**      | [VortXTV/VortX](https://github.com/VortXTV/VortX)                  | ❌ (Apple now, Android coming) | Native Apple TV/iOS/Mac player. Android next. Stremio addons planned              |
 
+### Collection-code setup
+
+| App | Website | ATV | Features |
+|-----|---------|-----|----------|
+| Linkstreams | [Official site](https://linkstreams.app/) | ✅ | Free beta. Stremio-compatible addon collections shared by code; no Linkstreams account. History and settings stay on each device. No content included. |
+
 ### Bridge — Run Stremio Addons Inside Another App
 
 | Host App          | Bridge                     | Link                                                                                           | How                                                                            |
